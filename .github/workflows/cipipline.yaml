@@ -5,9 +5,13 @@ jobs:
     name: Building CD pipeline
     runs-on: ubuntu-latest
     steps:
-     - name: Execute remote SSH commands using password
-       uses: appleboy/ssh-action@v1
-        with:
+
+    - name: checkout the code
+      uses : actions/checkout@v2
+
+    - name: Execute remote SSH commands using password
+      uses: appleboy/ssh-action@v1.2.0
+      with:
           host: 62.72.30.103
           username: ubuntu
           password: ${{ PRIVATE_KEY_VPS }}
