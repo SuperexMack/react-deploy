@@ -9,7 +9,7 @@ jobs:
     - name: checkout the code
       uses : actions/checkout@v2
 
-    - name: Execute remote SSH commands using password
+    - name: Execute CD
       uses: appleboy/ssh-action@v1.2.0
       with:
           host: 62.72.30.103
