@@ -23,4 +23,6 @@ jobs:
           git pull origin master
           npm install
           npm run build
+          npm install -g http-server
+          pm2 delete react-app || true
           pm2 start "/home/ubuntu/.nvm/versions/node/v24.8.0/bin/http-server dist -p 8000 -a 0.0.0.0" --name react-app
