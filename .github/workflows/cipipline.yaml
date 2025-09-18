@@ -1,19 +1,21 @@
 name: Remote SSH Command
+
 on: [push]
+
 jobs:
   deploy:
     name: Building CD pipeline
     runs-on: ubuntu-latest
     steps:
 
-    - name: checking the code
-      uses : actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     - name: Execute CD
       uses: appleboy/ssh-action@v1.2.0
       with:
-          host: 62.72.30.103
-          username: ubuntu
-          key : ${{ secrets.PRIVATE_KEY_VPS }}
-          port: 22
-          script: ./deploy.sh
+        host: 62.72.30.103
+        username: ubuntu
+        key: ${{ secrets.PRIVATE_KEY_VPS }}
+        port: 22
+        script: ./deploy.sh
