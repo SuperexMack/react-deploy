@@ -19,4 +19,4 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY_VPS }}
         port: 22
         script: |
-            cd react-deploy && cd client && git pull origin master && npm install && npm run build && npm run dev
+            cd react-deploy/client && git pull origin master && npm install && npm run build && npm run dev
