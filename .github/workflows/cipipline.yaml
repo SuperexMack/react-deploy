@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Checkout code
+    - name: Checkout codee
       uses: actions/checkout@v2
-`
+
     - name: Execute CD pipelinee
       uses: appleboy/ssh-action@v1.2.0
       with:
